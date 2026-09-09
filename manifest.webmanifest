@@ -1,0 +1,19 @@
+{
+  "name": "handhoch",
+  "short_name": "handhoch",
+  "description": "Interaktive Kurzabfragen für den Unterricht.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f2ec",
+  "theme_color": "#143659",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
