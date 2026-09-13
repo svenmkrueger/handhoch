@@ -10,7 +10,7 @@
  * Fassung behielten — hier gibt es nur noch eine Quelle.
  * ========================================================================== */
 
-const CACHE = "handhoch-v0.31.0";
+const CACHE = "handhoch-v0.32.0";
 const DATEIEN = [
   "./",
   "./index.html",
