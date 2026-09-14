@@ -10,7 +10,7 @@
  * Fassung behielten — hier gibt es nur noch eine Quelle.
  * ========================================================================== */
 
-const CACHE = "handhoch-v0.35.2";
+const CACHE = "handhoch-v0.36.0";
 const DATEIEN = [
   "./",
   "./index.html",
@@ -37,6 +37,9 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  // Die Zählpfade müssen den Server erreichen — aus dem Cache gezählt
+  // sieht GitHub nichts (siehe zaehler.js).
+  if (/\/z\/[a-z]+\/$/.test(new URL(e.request.url).pathname)) return;
   e.respondWith(
     caches.match(e.request, { ignoreSearch: true }).then(
       (treffer) =>
